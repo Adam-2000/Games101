@@ -120,8 +120,12 @@ MaterialType Material::getType(){return m_type;}
 ///Vector3f Material::getColor(){return m_color;}
 Vector3f Material::getEmission() {return m_emission;}
 bool Material::hasEmission() {
-    if (m_emission.norm() > EPSILON) return true;
-    else return false;
+    if (m_emission.norm() > EPSILON){
+        return true;
+    } 
+    else {
+        return false;
+    }
 }
 
 Vector3f Material::getColorAt(double u, double v) {
